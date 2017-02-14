@@ -50,3 +50,5 @@ function install_from_pkg () {
     echo "Install package ${1}"
     sudo installer -package "${1}" -target "/"
 }
+
+install_from_dmg $1 $2
