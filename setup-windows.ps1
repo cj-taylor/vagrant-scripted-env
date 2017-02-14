@@ -22,3 +22,13 @@ else {
 }
 
 # Run your code that needs to be elevated here...
+
+Write-Host "Installing chocolatey package manager";
+Invoke-WebRequest https://chocolatey.org/install.ps1 -UseBasicParsing | Invoke-Expression
+
+Write-Host "Installing virtualbox";
+choco install virtualbox -version 5.1.10 -y --force
+
+Write-Host "Installing vagrant";
+choco install vagrant -version 1.9.0 -y --force
+Exit;
